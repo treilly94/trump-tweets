@@ -10,7 +10,7 @@ def sentence_reader():
     """
     # Get Html and create Soup
     r = requests.get('https://twitter.com/realDonaldTrump?lang=en-gb')
-    soup = BeautifulSoup(r.content, "lxml")
+    soup = BeautifulSoup(r.content, "html5lib")
 
     # Read data into dataframe
     df = pd.DataFrame({"Time": [], "Text": []})
